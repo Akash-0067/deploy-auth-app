@@ -4,9 +4,10 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Home from './pages/Home';
 import RefresHandler from './RefresHandler';
+import { useState } from 'react';
 
 function App() {
-const [isAuthenticated, setIsAuthenticated] = usestate(false);
+const [isAuthenticated, setIsAuthenticated] = useState(false);
 const PrivateRoute = ({element}) =>{
   return isAuthenticated ? element : <Navigate to ="/login"/>
 }
